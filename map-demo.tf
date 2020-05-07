@@ -5,9 +5,10 @@ variable "marta_api_key" {
 module "map-demo" {
   source = "./modules/service"
 
-  name  = "map-demo.staging"
-  image = "smartatransit/map-demo:latest"
-  port  = 4000
+  name      = "map-demo-staging"
+  subdomain = "map-demo.staging"
+  image     = "smartatransit/map-demo:latest"
+  port      = 4000
 
   env = {
     API_KEY = var.marta_api_key
